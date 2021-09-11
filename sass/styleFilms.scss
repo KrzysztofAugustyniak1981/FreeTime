@@ -1,0 +1,260 @@
+body {
+  background-color: #60a3bc;
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+}
+
+.intro-container {
+  display: flex;
+  height: 650px;
+  margin: auto;
+  border-radius: 5%;
+}
+
+.section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position:center;
+  transition: flex .4s ease;
+  position: relative;
+}
+
+.section .overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: background-color .8s ease;
+}
+
+.content {
+  color: #c7ecee;
+
+}
+
+.section .content {
+  z-index: 2;
+}
+
+.section:hover {
+  flex: 2;
+}
+
+.section:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#movies {
+  background-image: 
+  url(https://www.hdwallpapersfreedownload.com/uploads/large/super-heroes/spiderman-hd-image-wallpaper-free.jpg);
+}
+
+#series {
+  background-image: 
+  url(https://images.pexels.com/photos/5082567/pexels-photo-5082567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+
+/* Navigation */
+
+nav {
+  position: static;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #0a3d62;
+}
+
+.logo{
+  color: darksalmon;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 21px;
+  font-family: 'Fascinate', cursive;
+  text-decoration: underline;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 65%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #dff9fb;
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+a:hover {
+  color: #60a3bc;
+}
+
+.burger {
+  display:none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color:#0a3d62;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5 ease-in;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+  position:static;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Movies/Series section */
+
+.flex-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card{
+  background: #0a3d62;
+  width: 400px;
+  margin: 40px 10px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  padding: 20px;
+  color:#fff;
+  border-radius: 4px;
+}
+
+.heading {
+  text-align: center;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.img{
+  height: 250px;
+  width: 100%;
+  border-radius: 5px;
+  background-size: cover;
+}
+
+.details {
+  text-align: left;
+  margin: 20px;
+}
+
+.more a{
+  padding: 10px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  background-color: darksalmon;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #0a3d62;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a:hover {
+  color: #60a3bc;
+}
+
+
+
+
+.footer {
+  background: darksalmon;
+  color: #0a3d62;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+  font-family: cursive;
+  box-shadow: 0px 0px 10px grey;
+  border: 5px solid grey;
+}
+.center:hover {
+  transform: scale(2, 3);
+  border: none;
+  box-shadow: none;
+  color: grey;
+}
+
+/* Responsive CSS */

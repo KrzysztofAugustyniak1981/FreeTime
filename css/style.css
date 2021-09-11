@@ -1,0 +1,349 @@
+body {
+  background-color: #60a3bc;
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #e17055;
+  background-position: 100% 0;
+  background-size: 300%;
+  transition: all 2s;
+}
+
+.btn-one {
+  border-color: darksalmon;
+  color: #130f40;
+  background-image: linear-gradient(90deg, #c7ecee 50%, transparent 50%);
+}
+
+.btn:hover {
+  background-position: 0 100%;
+  color: #fad390;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+  background-color: #60a3bc;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Slideshow */
+/* Hide the images by default */
+.mySlides {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 650px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+}
+
+img {
+  height: 650px;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navigation */
+nav {
+  position: static;
+  top: 0;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  min-height: 8vh;
+  background-color: #0a3d62;
+}
+
+.logo {
+  color: darksalmon;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 21px;
+  font-family: 'Fascinate', cursive;
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+.nav-links {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 70%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #dff9fb;
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+a:hover {
+  color: #60a3bc;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: fixed;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #0a3d62;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5 ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+  position: static;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.box2 {
+  min-height: 300px;
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-bottom: 50px;
+}
+
+.description {
+  width: 50%;
+  padding: 20px;
+}
+
+.image {
+  border: 3px solid midnightblue;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 20px;
+  width: 50%;
+}
+
+.photo {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer {
+  background: darksalmon;
+  color: #0a3d62;
+  text-align: center;
+}
+
+.g1 {
+  display: inline-block;
+  margin: 90%;
+}
+
+.grytext {
+  color: black;
+  font-size: 14px;
+  font-family: arial;
+  width: auto;
+  margin: auto;
+  text-align: center;
+}
+
+.col-1 {
+  width: 8.334%;
+}
+
+.col-2 {
+  width: 16.667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.334%;
+}
+
+.col-5 {
+  width: 41.667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.334%;
+}
+
+.col-8 {
+  width: 66.667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.334%;
+}
+
+.col-11 {
+  width: 91.667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@media (max-width: 468px) {
+  .col {
+    float: none;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
